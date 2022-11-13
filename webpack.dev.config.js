@@ -8,9 +8,7 @@ module.exports = {
     entry: {
         main: [
             "core-js/stable", 
-            "regenerator-runtime/runtime", 
-            "webpack-dev-server/client", 
-            "webpack/hot/dev-server",
+            "regenerator-runtime/runtime",
             './src/public/index.js'
         ]
     },
@@ -19,6 +17,7 @@ module.exports = {
         publicPath: "/",
         filename: "js/[name].js"
     },
+    mode: 'development',
     target: "web",
     module: {
         rules: [
@@ -62,19 +61,17 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, './dist/public'),
+            directory: path.join(__dirname, 'dist/public'),
         },
+        // client: {
+        //     overlay: true
+        // },
         open: true,
         compress: true,
         hot: true,
-        port: 8081,
-        // proxy: [{
-        //     path: /'*/,
-        //     target: 'http://localhost:3000',
-        // }]
+        port: 8082
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: "src/public/index.html",
             filename: "index.html",

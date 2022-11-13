@@ -6,11 +6,10 @@
   "main": "index.js",
   "scripts": {
     "win": "rmdir /s /q",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --config=webpack.dev.config.js webpack --config=webpack.server.config.js",
     "buildDev": "rm -rf dist && webpack --mode development --config webpack.dev.config.js && webpack --mode development --config webpack.server.config.js",
     "buildProd": "rm -rf dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
-    "start": "nodemon dist/server/server.js",
-    "server": "rm -rf dist && webpack serve",
+    "start": "nodemon src/server/server.js",
+    "back": "webpack --config webpack.server.config.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "nodemonConfig": {
