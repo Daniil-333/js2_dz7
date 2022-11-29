@@ -1,0 +1,7 @@
+.idea/
+
+.DS_Store
+style.css.map
+node_modules/
+_old/
+dist/
