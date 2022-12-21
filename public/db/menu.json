@@ -1,33 +1,45 @@
 {
-    "home": {
-        "women": [
-            "Dresses",
-            "Tops",
-            "Sweaters/Knits",
-            "Jackets/Coats",
-            "Blazers",
-            "Leggings/Pants",
-            "Skirts/Shorts",
-            "Accessories"
-        ],
-        "man": [
-            "Dresses",
-            "Tops",
-            "Sweaters/Knits",
-            "Jackets/Coats"
-        ],
-        "kids": [
-            "Dresses",
-            "Tops",
-            "Sweaters/Knits"
-        ],
-        "Accoseriese": [
-            "Dresses",
-            "Tops",
-            "Sweaters/Knits",
-            "Jackets/Coats"
-        ]
-    },
+    "home": [
+        {
+            "name": "women",
+            "categories": [
+                "Dresses",
+                "Tops",
+                "Sweaters/Knits",
+                "Jackets/Coats",
+                "Blazers",
+                "Leggings/Pants",
+                "Skirts/Shorts",
+                "Accessories"
+            ]
+        },
+        {
+            "name": "man",
+            "categories": [
+                "Dresses",
+                "Tops",
+                "Sweaters/Knits",
+                "Jackets/Coats"
+            ]
+        },
+        {
+            "name": "kids",
+            "categories": [
+                "Dresses",
+                "Tops",
+                "Sweaters/Knits"
+            ]
+        },
+        {
+            "name": "Accoseriese",
+            "categories": [
+                "Dresses",
+                "Tops",
+                "Sweaters/Knits",
+                "Jackets/Coats"
+            ]
+        }
+    ],
     "man": {
         "women": [
             "Dresses",

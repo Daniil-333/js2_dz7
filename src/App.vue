@@ -19,37 +19,21 @@ export default {
 
   provide() {
     return {
-      getJson: this.getJson
-    }
-  },
-
-  data() {
-    return {
-      menu: []
+      getJson: this.getJson,
+      menu: this.menu
     }
   },
 
   methods: {
-    getJson(url) {
-      this.axios
-        .get(url)
-        .then(data => {
-          // for (let el of data) {
-          //   this.menu.push(el);
-          // }
-          console.log(data);
-        })
-        .catch(error => console.log(error));
+    async getJson(url) {
+      try {
+        const resp = await this.axios
+          .get(url)
+        return resp.data
+      } catch(error) {
+        console.log(error)
+      }
     }
-
-
-
-
-  },
-
-  mounted() {
-    this.getJson('/db/menu.json')
-
   },
 
 }

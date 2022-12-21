@@ -203,11 +203,23 @@ import AppSubscribe from '@/components/views/AppSubscribe.vue';
 
 export default {
     name: 'AppHome',
+    inject: ['getJson'],
     components: {
         AppPromo,
         AppSale,
         AppSubscribe
-    }
+    },
+
+    data() {
+        return {
+            featuredItems: []
+        }
+    },
+
+    mounted() {
+        // this.getJson('/db/menu.json')
+        //     .then()
+    },
 }
 </script>
 

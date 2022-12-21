@@ -440,7 +440,7 @@ export default {
         isShowBreadcrumbs() {
             return this.$route.name == 'home' || this.$route.name == '404'
         }
-    },
+    }
 
 }
 </script>
@@ -785,8 +785,6 @@ export default {
         }
     }
 }
-
-
 
 @media screen and (min-width: 991.98px) {
     .menu {
