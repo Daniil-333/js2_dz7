@@ -49,12 +49,12 @@
                 <!-- <Products ref="products"></Products>
                 <error ref="error"></error> -->
                 <div class="fetured__box">
-                    <div class="product">
+                    <div class="product" v-for="item in featuredItems" :key="item.id">
                         <router-link :to="{ name: 'product' }" class="product__link">
-                            <img src="@/assets/img/fetured-item1.jpg" alt="T-Short" class="product__img">
+                            <img :src=getImgUrl(item.img) :alt="`{{ item.name }}`" class="product__img">
                         </router-link>
-                        <p class="product__name">Mango People T-shirt</p>
-                        <div class="product__price"><span>$52.00</span>
+                        <p class="product__name">{{ item.name }}</p>
+                        <div class="product__price"><span>${{ item.price }}</span>
                             <div class="product__rating">
                                 <i class="fa fa-star product__stars" aria-hidden="true"></i>
                                 <i class="fa fa-star product__stars" aria-hidden="true"></i>
@@ -197,13 +197,13 @@
 </template>
 
 <script>
-import AppPromo from '@/components/views/AppPromo.vue';
-import AppSale from '@/components/views/AppSale.vue';
-import AppSubscribe from '@/components/views/AppSubscribe.vue';
+import axios from "axios";
+import AppPromo from '@/components/AppPromo.vue';
+import AppSale from '@/components/AppSale.vue';
+import AppSubscribe from '@/components/AppSubscribe.vue';
 
 export default {
     name: 'AppHome',
-    inject: ['getJson'],
     components: {
         AppPromo,
         AppSale,
@@ -216,9 +216,22 @@ export default {
         }
     },
 
-    mounted() {
-        // this.getJson('/db/menu.json')
-        //     .then()
+    methods: {
+        async getProducts() {
+            try {
+                const response = await axios.get("http://localhost:3080/products");
+                this.featuredItems = response.data.filter(product => product.is_main == true);
+            } catch (err) {
+                console.log(err);
+            }
+        },
+        getImgUrl(pic) {
+            return require(`@/assets/img/${pic}`);
+        },  
+    },
+
+    created() {
+        this.getProducts();
     },
 }
 </script>

@@ -141,7 +141,7 @@
 </template>
 
 <script>
-import AppSubscribe from '../AppSubscribe.vue';
+import AppSubscribe from '@/components/AppSubscribe.vue';
 
 export default {
     name: 'AppProduct',

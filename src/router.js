@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import AppHome from '@/components/views/pages/AppHome';
-import AppCatalog from '@/components/views/pages/AppCatalog';
-import AppProduct from '@/components/views/pages/AppProduct';
-import AppCart from '@/components/views/pages/AppCart';
-import AppCheckout from '@/components/views/pages/AppCheckout';
-import AppE404 from '@/components/views/pages/AppE404';
+import AppHome from '@/components/pages/AppHome';
+import AppCatalog from '@/components/pages/AppCatalog';
+import AppProduct from '@/components/pages/AppProduct';
+import AppCart from '@/components/pages/AppCart';
+import AppCheckout from '@/components/pages/AppCheckout';
+import AppE404 from '@/components/pages/AppE404';
 
 const routes = [
     {

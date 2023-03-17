@@ -99,8 +99,6 @@ export default {
         margin-left: auto;
     }
 
-    .footer-menu__col {}
-
     .footer-menu__col:not(:last-child) {
         margin-right: 110px;
     }
@@ -122,6 +120,8 @@ export default {
         line-height: 42px;
         font-weight: 400;
         color: #898989;
+        white-space: nowrap;
+        transition: color .3s, opacity .3s;
 
         &:hover {
             color: @siteColor;

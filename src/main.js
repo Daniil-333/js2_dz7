@@ -5,6 +5,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import '@/assets/styles/style.less'
 
+
 createApp(App)
     .use(router)
     .use(VueAxios, axios)

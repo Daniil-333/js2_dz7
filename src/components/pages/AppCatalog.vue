@@ -280,8 +280,8 @@
 </template>
 
 <script>
-import AppAdvantages from '@/components/views/AppAdvantages.vue';
-import AppSubscribe from '@/components/views/AppSubscribe.vue';
+import AppAdvantages from '@/components/AppAdvantages.vue';
+import AppSubscribe from '@/components/AppSubscribe.vue';
 
 
 export default {

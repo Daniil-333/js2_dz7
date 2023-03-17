@@ -428,7 +428,7 @@
 </template>
 
 <script>
-import AppBreadcrumbs from '@/components/views/AppBreadcrumbs.vue'
+import AppBreadcrumbs from '@/components/AppBreadcrumbs.vue'
 
 export default {
     name: 'AppHeader',
@@ -438,7 +438,7 @@ export default {
 
     computed: {
         isShowBreadcrumbs() {
-            return this.$route.name == 'home' || this.$route.name == '404'
+            return this.$route.name == 'home' || this.$route.name == '404';
         }
     }
 
@@ -573,10 +573,13 @@ export default {
     &__img {
         display: block;
         margin-right: 25px;
-        transition: transform 1s;
+        transition: filter .3s;
 
         &:hover {
-            transform: rotate(360deg);
+            filter: drop-shadow(2px 4px 6px rgba(10,10,10, .5));
+        }
+        &:active {
+            filter: drop-shadow(2px 4px 6px rgba(10,10,10, .8));
         }
     }
 
@@ -591,6 +594,8 @@ export default {
         color: #ffffff;
         padding-left: 19px;
         box-sizing: border-box;
+        outline: 3px solid transparent;
+        transition: outline-color .3s;
 
         &[open] .cart-drop {
             display: block;
@@ -613,11 +618,11 @@ export default {
 
         &:hover {
             cursor: pointer;
-            outline: 3px solid @siteColor - @textColor;
+            outline-color: @siteColor - @textColor;
         }
 
         &:active {
-            outline: 3px solid #e6e6e6;
+            outline-color: #e6e6e6;
         }
     }
 

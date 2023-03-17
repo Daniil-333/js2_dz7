@@ -53,13 +53,11 @@
 <script>
 export default {
     name: 'AppSale',
-    props: {}
 }
 </script>
 
 <style lang="less">
 .sale {
-
 
     &__content {
         position: relative;

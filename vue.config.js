@@ -1,6 +1,6 @@
 const path = require('path')
-
 const { defineConfig } = require('@vue/cli-service')
+
 module.exports = defineConfig({
   transpileDependencies: true,
   
@@ -8,6 +8,15 @@ module.exports = defineConfig({
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
     types.forEach(type => addStyleResource(config.module.rule('less').oneOf(type)))
   },
+
+  devServer: {
+    proxy: {
+      '^/api': {
+        target: 'http://localhost:3080',
+        changeOrigin: true
+      },
+    }
+  }
 })
 
 function addStyleResource (rule) {

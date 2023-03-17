@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import AppSubscribe from '@/components/views/AppSubscribe.vue';
+import AppSubscribe from '@/components/AppSubscribe.vue';
 
 export default {
     name: 'AppCheckout',

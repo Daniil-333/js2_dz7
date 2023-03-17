@@ -7,33 +7,14 @@
 </template>
 
 <script>
-import AppHeader from '@/components/views/parts/AppHeader.vue'
-import AppFooter from '@/components/views/parts/AppFooter.vue'
+import AppHeader from '@/components/common/AppHeader.vue'
+import AppFooter from '@/components/common/AppFooter.vue'
 
 export default {
   name: 'App',
   components: {
     AppHeader,
     AppFooter,
-  },
-
-  provide() {
-    return {
-      getJson: this.getJson,
-      menu: this.menu
-    }
-  },
-
-  methods: {
-    async getJson(url) {
-      try {
-        const resp = await this.axios
-          .get(url)
-        return resp.data
-      } catch(error) {
-        console.log(error)
-      }
-    }
   },
 
 }
