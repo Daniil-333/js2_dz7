@@ -51,7 +51,7 @@
                 <div class="fetured__box">
                     <div class="product" v-for="item in featuredItems" :key="item.id">
                         <router-link :to="{ name: 'product' }" class="product__link">
-                            <img :src=getImgUrl(item.img) :alt="`{{ item.name }}`" class="product__img">
+                            <img :src=getImgUrl(item.img) :alt="item.name" class="product__img">
                         </router-link>
                         <p class="product__name">{{ item.name }}</p>
                         <div class="product__price"><span>${{ item.price }}</span>
@@ -68,125 +68,6 @@
                             Add toCart
                         </button>
                     </div>
-<!--                     <div class="product">
-                        <a href="single-page.html" class="product__link">
-                            <img src="img/fetured-item2.jpg" alt="T-Short" class="product__img"></a>
-                        <p class="product__name">Mango People T-shirt</p>
-                        <div class="product__price"><span>$52.00</span>
-                            <div class="product__rating">
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <button type="button" class="product__add"><img src="img/basket_small.png"
-                                alt="Добавить в корзину" class="product__basket">Add to
-                            Cart</button>
-                    </div>
-                    <div class="product">
-                        <a href="single-page.html" class="product__link">
-                            <img src="img/fetured-item3.jpg" alt="T-Short" class="product__img"></a>
-                        <p class="product__name">Mango People T-shirt</p>
-                        <div class="product__price"><span>$52.00</span>
-                            <div class="product__rating">
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <button type="button" class="product__add"><img src="img/basket_small.png"
-                                alt="Добавить в корзину" class="product__basket">Add to
-                            Cart</button>
-                    </div>
-                    <div class="product">
-                        <a href="single-page.html" class="product__link">
-                            <img src="img/fetured-item4.jpg" alt="T-Short" class="product__img"></a>
-                        <p class="product__name">Mango People T-shirt</p>
-                        <div class="product__price"><span>$52.00</span>
-                            <div class="product__rating">
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <button type="button" class="product__add"><img src="img/basket_small.png"
-                                alt="Добавить в корзину" class="product__basket">Add to
-                            Cart</button>
-                    </div>
-                    <div class="product">
-                        <a href="single-page.html" class="product__link">
-                            <img src="img/fetured-item5.jpg" alt="T-Short" class="product__img"></a>
-                        <p class="product__name">Mango People T-shirt</p>
-                        <div class="product__price"><span>$52.00</span>
-                            <div class="product__rating">
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <button type="button" class="product__add"><img src="img/basket_small.png"
-                                alt="Добавить в корзину" class="product__basket">Add to
-                            Cart</button>
-                    </div>
-                    <div class="product">
-                        <a href="single-page.html" class="product__link">
-                            <img src="img/fetured-item6.jpg" alt="T-Short" class="product__img"></a>
-                        <p class="product__name">Mango People T-shirt</p>
-                        <div class="product__price"><span>$52.00</span>
-                            <div class="product__rating">
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <button type="button" class="product__add"><img src="img/basket_small.png"
-                                alt="Добавить в корзину" class="product__basket">Add to
-                            Cart</button>
-                    </div>
-                    <div class="product">
-                        <a href="single-page.html" class="product__link">
-                            <img src="img/fetured-item7.jpg" alt="T-Short" class="product__img"></a>
-                        <p class="product__name">Mango People T-shirt</p>
-                        <div class="product__price"><span>$52.00</span>
-                            <div class="product__rating">
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <button type="button" class="product__add"><img src="img/basket_small.png"
-                                alt="Добавить в корзину" class="product__basket">Add to
-                            Cart</button>
-                    </div>
-                    <div class="product">
-                        <a href="single-page.html" class="product__link">
-                            <img src="img/fetured-item8.jpg" alt="T-Short" class="product__img"></a>
-                        <p class="product__name">Mango People T-shirt</p>
-                        <div class="product__price"><span>$52.00</span>
-                            <div class="product__rating">
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                                <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <button type="button" class="product__add"><img src="img/basket_small.png"
-                                alt="Добавить в корзину" class="product__basket">Add to
-                            Cart</button>
-                    </div> -->
                 </div>
                 <router-link :to="{ name: 'catalog' }" class="fetured__browse">Browse All Product</router-link>
             </div>
@@ -209,6 +90,7 @@ export default {
         AppSale,
         AppSubscribe
     },
+    inject: ['getImgUrl', 'host'],
 
     data() {
         return {
@@ -219,15 +101,12 @@ export default {
     methods: {
         async getProducts() {
             try {
-                const response = await axios.get("http://localhost:3080/products");
+                const response = await axios.get(`${this.host}/products`);
                 this.featuredItems = response.data.filter(product => product.is_main == true);
             } catch (err) {
                 console.log(err);
             }
         },
-        getImgUrl(pic) {
-            return require(`@/assets/img/${pic}`);
-        },  
     },
 
     created() {
@@ -262,6 +141,7 @@ export default {
             padding: 16px;
             position: absolute;
             top: 26px;
+            transition: background-color .3s, opacity .3s;
 
             .gender__link_span {
                 font-size: 30px;
@@ -285,8 +165,6 @@ export default {
         .left-side {
             margin-right: 2%;
         }
-
-
     }
 
     .fetured {
@@ -334,6 +212,8 @@ export default {
             letter-spacing: 0.025em;
             color: #ffffff;
             text-align: center;
+            outline: 1px solid transparent;
+            transition: outline-color .3s, opacity .3s;
 
             &::after {
                 content: "\f178";
@@ -347,7 +227,7 @@ export default {
             }
 
             &:hover {
-                outline: 1px solid @textColor;
+                outline-color: @textColor;
             }
 
             &:active {

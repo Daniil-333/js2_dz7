@@ -8,19 +8,19 @@ import { showProducts, showProductById, createProduct, updateProduct, deleteProd
 const router = express.Router();
  
 // Get All Product
-router.get('/products', showProducts);
+router.get('/api/products', showProducts);
  
 // Get Single Product
-router.get('/products/:id', showProductById);
+router.get('/api/products/:id', showProductById);
  
 // Create New Product
-router.post('/products', createProduct);
+router.post('/api/products', createProduct);
  
 // Update Product
-router.put('/products/:id', updateProduct);
+router.put('/api/products/:id', updateProduct);
  
 // Delete Product
-router.delete('/products/:id', deleteProduct);
+router.delete('/api/products/:id', deleteProduct);
  
 // export default router
 export default router;

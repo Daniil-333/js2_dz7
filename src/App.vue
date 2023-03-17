@@ -17,6 +17,19 @@ export default {
     AppFooter,
   },
 
+  provide() {
+    return {
+      getImgUrl: this.getImgUrl,
+      host: "http://localhost:3080/api",
+    }
+  },
+
+  methods: {
+    getImgUrl(pic) {
+      return require(`@/assets/img/${pic}`);
+    },
+  }
+
 }
 </script>
 

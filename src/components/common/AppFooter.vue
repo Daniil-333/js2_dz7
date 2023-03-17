@@ -17,29 +17,9 @@
                         optimize.</p>
                 </div>
                 <div class="footer-menu">
-                    <nav class="footer-menu__col">
-                        <p class="footer-menu__title">Company</p>
-                        <a href="#" class="footer-menu__link">Home</a>
-                        <a href="#" class="footer-menu__link">Shop</a>
-                        <a href="#" class="footer-menu__link">About</a>
-                        <a href="#" class="footer-menu__link">How It Work</a>
-                        <a href="#" class="footer-menu__link">Contact</a>
-                    </nav>
-                    <nav class="footer-menu__col">
-                        <p class="footer-menu__title">Information</p>
-                        <a href="#" class="footer-menu__link">Tearms & Condition</a>
-                        <a href="#" class="footer-menu__link">Privacy Policy</a>
-                        <a href="#" class="footer-menu__link">How to Buy</a>
-                        <a href="#" class="footer-menu__link">How to Sell</a>
-                        <a href="#" class="footer-menu__link">Promotion</a>
-                    </nav>
-                    <nav class="footer-menu__col">
-                        <p class="footer-menu__title">Shop Category</p>
-                        <a href="#" class="footer-menu__link">Men</a>
-                        <a href="#" class="footer-menu__link">Women</a>
-                        <a href="#" class="footer-menu__link">Child</a>
-                        <a href="#" class="footer-menu__link">Apparel</a>
-                        <a href="#" class="footer-menu__link">Brows All</a>
+                    <nav class="footer-menu__col" v-for="(arr, name) in navMenu" :key="name">
+                        <p class="footer-menu__title">{{ name.replace('_', ' ') }}</p>
+                        <a href="#" class="footer-menu__link" v-for="item in arr" :key="item">{{ item }}</a>
                     </nav>
                 </div>
             </div>
@@ -49,11 +29,9 @@
                 <div class="footer__bottom">
                     <p class="footer-panel__policy">&copy; 2020 Brand All Rights Reserved.</p>
                     <div class="footer-social">
-                        <a href="#" class="footer-social__link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#" class="footer-social__link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#" class="footer-social__link"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        <a href="#" class="footer-social__link"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                        <a href="#" class="footer-social__link"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        <a :href=link class="footer-social__link" v-for="(link, name) in social" :key="name">
+                            <i :class=getClassName(name) aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -64,7 +42,29 @@
 <script>
 export default {
     name: 'AppFooter',
-    props: {}
+    
+    data() {
+        return {
+            navMenu: {
+                company: ['Home','Shop','About','How It Work','Contact'],
+                information: ['Tearms & Condition','Privacy Policy','How to Buy','How to Sell','Promotion'],
+                shop_category: ['Men','Women','Child','Apparel','Brows All'],
+            },
+            social: {
+                facebook: '#',
+                twitter: '#',
+                linkedin: '#',
+                pinterest_p: '#',
+                google_plus: '#'
+            }
+        }
+    },
+
+    methods: {
+        getClassName(name) {
+            return `fa fa-${name.replace('_', '-')}`
+        }
+    }
 }
 </script>
 

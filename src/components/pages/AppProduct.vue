@@ -54,12 +54,12 @@
         <div class="singleProducts">
             <h4 class="singleProducts-h4">you may like also</h4>
             <div class="singleProducts__items container">
-                <div class="product">
+                <div class="product" v-for="item in products" :key="item.id">
                     <a href="#" class="product__link">
-                        <img src="@/assets/img/add_items1.jpg" alt="Blaze Leggings" class="product__img">
+                        <img :src=getImgUrl(item.img) :alt="item.name" class="product__img">
                     </a>
-                    <p class="product__name">Blaze Leggings</p>
-                    <div class="product__price"><span>$52.00</span>
+                    <p class="product__name">{{ item.name }}</p>
+                    <div class="product__price"><span>${{ item.price }}</span>
                         <div class="product__rating">
                             <i class="fa fa-star product__stars" aria-hidden="true"></i>
                             <i class="fa fa-star product__stars" aria-hidden="true"></i>
@@ -71,69 +71,6 @@
                     <button type="button" class="product__add"><img src="@/assets/img/basket_small.png"
                             alt="Добавить в корзину" class="product__basket">Add to Cart</button>
                 </div>
-                <!-- <div class="product">
-                    <a href="#" class="product__link">
-                        <img src="img/add_items2.jpg" alt="Blaze Leggings" class="product__img">
-                    </a>
-                    <p class="product__name">Alexa Sweater</p>
-                    <div class="product__price"><span>$52.00</span>
-                        <div class="product__rating">
-                            <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <button type="button" class="product__add"><img src="img/basket_small.png" alt="Добавить в корзину"
-                        class="product__basket">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <a href="#" class="product__link">
-                        <img src="img/add_items3.jpg" alt="Blaze Leggings" class="product__img">
-                    </a>
-                    <p class="product__name">Agnes Top</p>
-                    <div class="product__price"><span>$52.00</span>
-                        <div class="product__rating">
-                            <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <button type="button" class="product__add"><img src="img/basket_small.png" alt="Добавить в корзину"
-                        class="product__basket">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <a href="#" class="product__link">
-                        <img src="img/add_items4.jpg" alt="Blaze Leggings" class="product__img">
-                    </a>
-                    <p class="product__name">ylva Sweater</p>
-                    <div class="product__price"><span>$52.00</span>
-                        <div class="product__rating">
-                            <i class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                            <i
-                                    class="fa fa-star product__stars" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <button type="button" class="product__add"><img src="img/basket_small.png" alt="Добавить в корзину"
-                        class="product__basket">Add to Cart</button>
-                </div> -->
             </div>
         </div>
     </main>
@@ -141,14 +78,36 @@
 </template>
 
 <script>
+import axios from "axios";
 import AppSubscribe from '@/components/AppSubscribe.vue';
 
 export default {
     name: 'AppProduct',
-    props: {},
     components: {
         AppSubscribe
-    }
+    },
+    inject: ['getImgUrl', 'host'],
+
+    data() {
+        return {
+            products: []
+        }
+    },
+
+    methods: {
+        async getProducts() {
+            try {
+                const response = await axios.get(`${this.host}/products`);
+                this.products = response.data.filter(product => product.is_also == true);
+            } catch (err) {
+                console.log(err);
+            }
+        },
+    },
+
+    created() {
+        this.getProducts();
+    },
 }
 
 </script>

@@ -98,325 +98,31 @@
                         <ul class="menu__list">
                             <li class="menu__item">
                                 <router-link :to="{ name: 'home' }" class="menu__item-link">Home</router-link>
-                                <div class="drop">
-                                    <div class="drop__content">
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li><a href="#" class="drop__link">Blazers</a></li>
-                                                <li><a href="#" class="drop__link">Denim</a></li>
-                                                <li><a href="#" class="drop__link">Leggings/Pants</a></li>
-                                                <li><a href="#" class="drop__link">Skirts/Shorts</a></li>
-                                                <li><a href="#" class="drop__link">Accessories</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                            </ul>
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li class="drop__supersale">Super sale!</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <AppMegaMenu />
                             </li>
                             <li class="menu__item">
                                 <router-link :to="{ name: 'catalog' }" class="menu__item-link">Man</router-link>
-                                <div class="drop">
-                                    <div class="drop__content">
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li><a href="#" class="drop__link">Blazers</a></li>
-                                                <li><a href="#" class="drop__link">Denim</a></li>
-                                                <li><a href="#" class="drop__link">Leggings/Pants</a></li>
-                                                <li><a href="#" class="drop__link">Skirts/Shorts</a></li>
-                                                <li><a href="#" class="drop__link">Accessories</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                            </ul>
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li class="drop__supersale">Super sale!</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <AppMegaMenu />
                             </li>
                             <li class="menu__item">
                                 <router-link :to="{ name: 'catalog' }" class="menu__item-link">Women</router-link>
-                                <div class="drop">
-                                    <div class="drop__content">
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li><a href="#" class="drop__link">Blazers</a></li>
-                                                <li><a href="#" class="drop__link">Denim</a></li>
-                                                <li><a href="#" class="drop__link">Leggings/Pants</a></li>
-                                                <li><a href="#" class="drop__link">Skirts/Shorts</a></li>
-                                                <li><a href="#" class="drop__link">Accessories</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                            </ul>
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li class="drop__supersale">Super sale!</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <AppMegaMenu />
                             </li>
                             <li class="menu__item menu__item_center">
                                 <router-link :to="{ name: 'catalog' }" class="menu__item-link">Kids</router-link>
-                                <div class="drop">
-                                    <div class="drop__content">
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li><a href="#" class="drop__link">Blazers</a></li>
-                                                <li><a href="#" class="drop__link">Denim</a></li>
-                                                <li><a href="#" class="drop__link">Leggings/Pants</a></li>
-                                                <li><a href="#" class="drop__link">Skirts/Shorts</a></li>
-                                                <li><a href="#" class="drop__link">Accessories</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                            </ul>
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li class="drop__supersale">Super sale!</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <AppMegaMenu />
                             </li>
                             <li class="menu__item">
                                 <router-link :to="{ name: 'catalog' }" class="menu__item-link">Accoseriese</router-link>
-                                <div class="drop">
-                                    <div class="drop__content">
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li><a href="#" class="drop__link">Blazers</a></li>
-                                                <li><a href="#" class="drop__link">Denim</a></li>
-                                                <li><a href="#" class="drop__link">Leggings/Pants</a></li>
-                                                <li><a href="#" class="drop__link">Skirts/Shorts</a></li>
-                                                <li><a href="#" class="drop__link">Accessories</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                            </ul>
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li class="drop__supersale">Super sale!</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <AppMegaMenu />
                             </li>
                             <li class="menu__item menu__item_last">
                                 <router-link :to="{ name: 'catalog' }" class="menu__item-link">Featured</router-link>
-                                <div class="drop">
-                                    <div class="drop__content">
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li><a href="#" class="drop__link">Blazers</a></li>
-                                                <li><a href="#" class="drop__link">Denim</a></li>
-                                                <li><a href="#" class="drop__link">Leggings/Pants</a></li>
-                                                <li><a href="#" class="drop__link">Skirts/Shorts</a></li>
-                                                <li><a href="#" class="drop__link">Accessories</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                            </ul>
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li class="drop__supersale">Super sale!</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <AppMegaMenu />
                             </li>
                             <li class="menu__item menu__item_last">
                                 <router-link :to="{ name: 'catalog' }" class="menu__item-link">Hot Deals</router-link>
-                                <div class="drop">
-                                    <div class="drop__content">
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li><a href="#" class="drop__link">Blazers</a></li>
-                                                <li><a href="#" class="drop__link">Denim</a></li>
-                                                <li><a href="#" class="drop__link">Leggings/Pants</a></li>
-                                                <li><a href="#" class="drop__link">Skirts/Shorts</a></li>
-                                                <li><a href="#" class="drop__link">Accessories</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                            </ul>
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="drop__col">
-                                            <h3 class="drop__h3">Women</h3>
-                                            <ul class="drop__ul">
-                                                <li><a href="#" class="drop__link">Dresses</a></li>
-                                                <li><a href="#" class="drop__link">Tops</a></li>
-                                                <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-                                                <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-                                                <li class="drop__supersale">Super sale!</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <AppMegaMenu />
                             </li>
                         </ul>
                     </div>
@@ -428,12 +134,14 @@
 </template>
 
 <script>
+import AppMegaMenu from '@/components/common/AppMegaMenu.vue'
 import AppBreadcrumbs from '@/components/AppBreadcrumbs.vue'
 
 export default {
     name: 'AppHeader',
     components: {
-        AppBreadcrumbs
+        AppBreadcrumbs,
+        AppMegaMenu
     },
 
     computed: {
@@ -708,13 +416,18 @@ export default {
             border: 1px solid #eaeaea;
             text-align: center;
             padding: 16px;
+            transition: color .3s, border-color .3s;
 
             &:hover {
                 color: #f16d7f;
-                border: 1px solid #f16d7f;
+                border-color: #f16d7f;
+            }
+            &:active {
+                color: #c95262;
+                border-color: #c95262;
             }
 
-            &:nth-of-type(1) {
+            &:not(:last-child) {
                 margin-bottom: 10px;
             }
         }

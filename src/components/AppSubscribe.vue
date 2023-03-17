@@ -67,11 +67,6 @@ export default {
 
         .subscribe-review__img {
             margin-right: 28px;
-            transition: transform 1.5s;
-
-            &:hover {
-                transform: scale(1.5);
-            }
         }
 
         .subscribe-review__article {
@@ -180,6 +175,7 @@ export default {
             border: none;
             padding: 16px 0;
             box-sizing: border-box;
+            transition: color .3s;
 
             &:hover {
                 color: @textColor;
