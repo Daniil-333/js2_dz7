@@ -23,3 +23,5 @@ pnpm-debug.log*
 *.sw?
 _old
 ДОДЕЛАТЬ.txt
+package-lock.json
+/server/package-lock.json

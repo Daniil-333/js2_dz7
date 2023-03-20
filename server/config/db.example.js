@@ -2,7 +2,7 @@ import mysql from "mysql2";
   
 // create the connection to database
 const pool = mysql.createPool({
-  host: '127.0.0.1',
+  host: 'localhost', // 127.0.0.1 for Mac OS, localhost for Windows
   user: 'root',
   password: 'rp3#l7_1',
   database: 'shop_brand',
