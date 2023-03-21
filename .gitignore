@@ -25,3 +25,4 @@ _old
 ДОДЕЛАТЬ.txt
 package-lock.json
 /server/package-lock.json
+/server/config/db.js
